@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayo Belajar Bahasa Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'times': ['Times New Roman', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-50 font-times">
+    <!-- Login Screen -->
+    <div id="loginScreen" class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h1 class="text-3xl font-bold text-center mb-8">Ayo Belajar Bahasa Indonesia</h1>
+            <p class="text-gray-600 text-center mb-6">Silakan masuk atau daftar untuk melanjutkan</p>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black focus:border-black">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-black focus:border-black">
+                </div>
+                <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                    Masuk
+                </button>
+            </form>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-600">Belum punya akun? 
+                    <button onclick="showRegisterForm()" class="font-medium text-black hover:text-gray-800">
+                        Daftar disini
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden until login) -->
+    <div id="mainContent" class="hidden">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <h1 class="text-xl font-bold">Ayo Belajar Bahasa Indonesia</h1>
+                        </div>
+                        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                            <a href="#" class="border-b-2 border-black text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                                Beranda
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                                Materi
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                                Kamus
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                                Latihan
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex items-center space-x-4">
+                            <img id="userAvatar" class="h-8 w-8 rounded-full" src="" alt="User avatar">
+                            <button onclick="handleSignOut()" class="text-sm text-gray-600 hover:text-gray-900">Keluar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard -->
+        <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <!-- Progress Overview -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Perkembangan Pembelajaran</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium mb-2">Materi Selesai</h3>
+                        <p id="completedLessons" class="text-3xl font-bold">0/10</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium mb-2">Nilai Rata-rata</h3>
+                        <p id="averageScore" class="text-3xl font-bold">0%</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium mb-2">Waktu Belajar</h3>
+                        <p id="studyTime" class="text-3xl font-bold">0 jam</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Materials -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Materi Pembelajaran</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- News Text Analysis -->
+                    <div class="border rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Teks Berita</h3>
+                        <p class="text-gray-600 mb-4">Pelajari cara menganalisis dan membedakan berita asli dari hoaks</p>
+                        <a href="lessons/news.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                            Mulai Belajar
+                        </a>
+                    </div>
+                    <!-- More modules to be added -->
+                    <div class="border rounded-lg p-4 bg-gray-50">
+                        <h3 class="text-xl font-medium mb-2">Materi Selanjutnya</h3>
+                        <p class="text-gray-600">Segera hadir</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dictionary Search -->
+            <div class="bg-white rounded-lg shadow p-6 mb-6">
+                <h2 class="text-2xl font-semibold mb-4">Kamus Besar Bahasa Indonesia</h2>
+                <div class="max-w-xl">
+                    <div class="flex gap-4">
+                        <input id="dictionaryInput" type="text" placeholder="Cari kata..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+                        <button onclick="searchDictionary()" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                            Cari
+                        </button>
+                    </div>
+                    <div id="dictionaryResult" class="mt-4"></div>
+                </div>
+            </div>
+
+            <!-- Practice Tests -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-2xl font-semibold mb-4">Latihan Ujian Kompetensi</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Uji Kompetensi Teks Berita</h3>
+                        <p class="text-gray-600 mb-4">Latihan menganalisis teks berita dan mengidentifikasi hoaks</p>
+                        <a href="lessons/news-test.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                            Mulai Latihan
+                        </a>
+                    </div>
+                    <div class="border rounded-lg p-4 bg-gray-50">
+                        <h3 class="text-xl font-medium mb-2">Latihan Selanjutnya</h3>
+                        <p class="text-gray-600">Segera hadir</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teks Berita - Ayo Belajar Bahasa Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'times': ['Times New Roman', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-times">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="text-xl font-bold">Ayo Belajar Bahasa Indonesia</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="../index.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Beranda
+                        </a>
+                        <a href="#" class="border-b-2 border-black text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Teks Berita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h1 class="text-3xl font-bold mb-6">Teks Berita</h1>
+            
+            <div class="prose max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Pengertian Teks Berita</h2>
+                <p class="mb-4">
+                    Teks berita adalah jenis teks yang berisi informasi mengenai suatu kejadian atau peristiwa yang faktual, aktual, dan penting untuk diketahui oleh pembaca. Teks berita harus memenuhi unsur 5W+1H:
+                </p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li><strong>What (Apa)</strong> - Peristiwa apa yang terjadi?</li>
+                    <li><strong>Who (Siapa)</strong> - Siapa yang terlibat dalam peristiwa?</li>
+                    <li><strong>When (Kapan)</strong> - Kapan peristiwa itu terjadi?</li>
+                    <li><strong>Where (Di mana)</strong> - Di mana peristiwa itu terjadi?</li>
+                    <li><strong>Why (Mengapa)</strong> - Mengapa peristiwa itu terjadi?</li>
+                    <li><strong>How (Bagaimana)</strong> - Bagaimana peristiwa itu terjadi?</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mb-4">Cara Membedakan Berita Asli dan Hoaks</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2 text-green-800">Ciri-ciri Berita Asli</h3>
+                        <ul class="list-disc pl-6 text-green-700">
+                            <li>Memiliki sumber berita yang jelas dan kredibel</li>
+                            <li>Informasi faktual dan dapat diverifikasi</li>
+                            <li>Menggunakan bahasa yang formal dan objektif</li>
+                            <li>Memuat data dan fakta yang akurat</li>
+                            <li>Diterbitkan oleh media yang terpercaya</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2 text-red-800">Ciri-ciri Berita Hoaks</h3>
+                        <ul class="list-disc pl-6 text-red-700">
+                            <li>Sumber berita tidak jelas atau mencurigakan</li>
+                            <li>Informasi sensasional dan memancing emosi</li>
+                            <li>Menggunakan bahasa yang provokatif</li>
+                            <li>Data dan fakta tidak dapat diverifikasi</li>
+                            <li>Disebarkan melalui media sosial atau pesan berantai</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-semibold mb-4">Cara Memverifikasi Berita</h2>
+                <ol class="list-decimal pl-6 mb-6">
+                    <li class="mb-2">
+                        <strong>Periksa Sumber Berita</strong>
+                        <p>Pastikan berita berasal dari media yang terpercaya dan memiliki reputasi baik.</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Cek Tanggal Publikasi</strong>
+                        <p>Perhatikan kapan berita tersebut dipublikasikan untuk memastikan aktualitas informasi.</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Bandingkan dengan Sumber Lain</strong>
+                        <p>Cari berita serupa dari sumber lain yang kredibel untuk memverifikasi kebenarannya.</p>
+                    </li>
+                    <li class="mb-2">
+                        <strong>Periksa Fakta</strong>
+                        <p>Gunakan situs fact-checking terpercaya untuk memeriksa kebenaran informasi.</p>
+                    </li>
+                </ol>
+
+                <div class="bg-yellow-50 p-4 rounded-lg mb-6">
+                    <h3 class="text-lg font-semibold mb-2">Tips Tambahan</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Jangan langsung mempercayai berita yang viral di media sosial</li>
+                        <li>Baca keseluruhan isi berita, jangan hanya judul</li>
+                        <li>Perhatikan kualitas penulisan dan tata bahasa</li>
+                        <li>Waspadai berita yang terlalu memancing emosi</li>
+                        <li>Gunakan akal sehat dalam menilai kebenaran berita</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Practice Section -->
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Latihan</h2>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="mb-4">Siap untuk menguji pemahaman Anda tentang teks berita?</p>
+                    <a href="news-test.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                        Mulai Latihan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

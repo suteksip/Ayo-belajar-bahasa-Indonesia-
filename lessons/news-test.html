@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Teks Berita - Ayo Belajar Bahasa Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'times': ['Times New Roman', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-times">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="text-xl font-bold">Ayo Belajar Bahasa Indonesia</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="../index.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Beranda
+                        </a>
+                        <a href="news.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Teks Berita
+                        </a>
+                        <a href="#" class="border-b-2 border-black text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Latihan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow p-6">
+            <h1 class="text-3xl font-bold mb-6">Latihan Analisis Teks Berita</h1>
+            
+            <div id="quiz-container">
+                <div class="mb-8">
+                    <p class="text-lg mb-4">Soal 1 dari 5</p>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <h2 class="text-xl font-semibold mb-4">Analisis Berita Berikut:</h2>
+                        <div class="prose max-w-none mb-6">
+                            <p class="mb-4">
+                                <strong>BREAKING NEWS: Ilmuwan Temukan Cara Membuat Manusia Bisa Terbang!</strong>
+                            </p>
+                            <p class="mb-4">
+                                Sekelompok ilmuwan mengklaim telah menemukan cara untuk membuat manusia bisa terbang tanpa menggunakan alat bantu. Penemuan ini didapat setelah penelitian selama 2 hari dengan menggunakan ramuan rahasia dari daun pohon ajaib yang hanya tumbuh di pegunungan tertentu.
+                            </p>
+                            <p class="mb-4">
+                                "Cukup minum ramuan ini dan dalam 5 menit Anda bisa terbang seperti burung!" kata seorang ilmuwan yang tidak mau disebutkan namanya. Ramuan ini akan dijual seharga Rp 99.999 per botol.
+                            </p>
+                            <p class="italic text-gray-600">
+                                Sumber: www.beritaajaib123.com
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <p class="font-medium">Apakah berita di atas termasuk berita asli atau hoaks? Jelaskan alasannya!</p>
+                            
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="radio" id="answer1" name="question1" class="h-4 w-4 border-gray-300 text-black focus:ring-black">
+                                    <label for="answer1" class="ml-2 block text-sm text-gray-900">
+                                        Berita asli, karena memuat informasi detail tentang penemuan ilmiah
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="answer2" name="question1" class="h-4 w-4 border-gray-300 text-black focus:ring-black">
+                                    <label for="answer2" class="ml-2 block text-sm text-gray-900">
+                                        Hoaks, karena sumber berita tidak kredibel dan klaim yang tidak masuk akal
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="answer3" name="question1" class="h-4 w-4 border-gray-300 text-black focus:ring-black">
+                                    <label for="answer3" class="ml-2 block text-sm text-gray-900">
+                                        Berita asli, karena ada kutipan langsung dari ilmuwan
+                                    </label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" id="answer4" name="question1" class="h-4 w-4 border-gray-300 text-black focus:ring-black">
+                                    <label for="answer4" class="ml-2 block text-sm text-gray-900">
+                                        Belum bisa dipastikan, perlu penelitian lebih lanjut
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="checkAnswer()" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                        Periksa Jawaban
+                    </button>
+                </div>
+
+                <div id="result" class="hidden">
+                    <div class="bg-green-50 p-6 rounded-lg mb-6">
+                        <h3 class="text-lg font-semibold text-green-800 mb-2">Jawaban Benar!</h3>
+                        <p class="text-green-700">
+                            Berita tersebut adalah hoaks. Beberapa indikator yang menunjukkan ini adalah hoaks:
+                        </p>
+                        <ul class="list-disc pl-6 mt-2 text-green-700">
+                            <li>Sumber berita tidak kredibel (www.beritaajaib123.com)</li>
+                            <li>Klaim yang tidak masuk akal (terbang tanpa alat bantu)</li>
+                            <li>Waktu penelitian yang sangat singkat (2 hari)</li>
+                            <li>Narasumber yang tidak jelas identitasnya</li>
+                            <li>Ada unsur komersial (penjualan ramuan)</li>
+                        </ul>
+                    </div>
+
+                    <button onclick="nextQuestion()" class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
+                        Soal Berikutnya
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function checkAnswer() {
+            const answer2 = document.getElementById('answer2');
+            if (answer2.checked) {
+                document.getElementById('result').classList.remove('hidden');
+            }
+        }
+
+        function nextQuestion() {
+            // In a real implementation, this would load the next question
+            alert('Fitur ini akan segera hadir!');
+        }
+    </script>
+</body>
+</html>
