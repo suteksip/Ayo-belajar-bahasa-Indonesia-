@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Materi Pembelajaran - Ayo Belajar Bahasa Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'times': ['Times New Roman', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="bg-gray-50 font-times">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-xl font-bold">Ayo Belajar Bahasa Indonesia</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Beranda
+                        </a>
+                        <a href="#" class="border-b-2 border-black text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+                            Materi Pembelajaran
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h1 class="text-3xl font-bold mb-6">Materi Pembelajaran</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border rounded-lg p-4">
+                    <h3 class="text-xl font-medium mb-2">Teks Berita</h3>
+                    <p class="text-gray-600 mb-4">Pelajari cara menganalisis dan membedakan berita asli dari hoaks</p>
+                    <a href="lessons/news.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                        Mulai Belajar
+                    </a>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h3 class="text-xl font-medium mb-2">Teks Debat</h3>
+                    <p class="text-gray-600 mb-4">Pelajari cara menyusun dan menganalisis teks debat</p>
+                    <a href="lessons/debate.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                        Mulai Belajar
+                    </a>
+                </div>
+                <div class="border rounded-lg p-4">
+                    <h3 class="text-xl font-medium mb-2">Teks Biografi</h3>
+                    <p class="text-gray-600 mb-4">Pelajari cara menyusun dan menganalisis teks biografi</p>
+                    <a href="lessons/biografi.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800">
+                        Mulai Belajar
+                    </a>
+                </div>
+                <div class="border rounded-lg p-4 bg-gray-50">
+                    <h3 class="text-xl font-medium mb-2">Materi Selanjutnya</h3>
+                    <p class="text-gray-600">Segera hadir</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
